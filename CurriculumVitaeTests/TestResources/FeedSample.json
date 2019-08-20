@@ -1,0 +1,144 @@
+{
+    "name": "Thomas Davis",
+    "summary": "I’m a full stack web developer who loves working with open source technology. I work best at planning the architecture of web  applications and their development life cycles. I also love to get the community involved and have had much experience with building and organizing large open source groups. Specialties: React, Redux, Javascript - Full stack developer with lots of experience in lots of stuff.",
+    "label": "Web Developer",
+    "photo_path": "http://www.lyon-photo.fr/wp-content/uploads/2014/07/photo-portrait-cv-une2.jpg",
+    "contact": {
+        "website": "https://ajaxdavis.com",
+        "email": "thomasalwyndavis@gmail.com",
+        "phone": "thomasalwyndavis@gmail.com",
+        "location": {
+            "city": "Melbourne",
+            "countryCode": "AU"
+        }
+    },
+    "education": [
+        {
+            "date_start": "2009-12-12",
+            "date_end": "2008-02-12",
+            "summary": "Software Engineering (incomplete)",
+            "degree_earned": "Bachelors",
+            "institution": "The University of Queensland"
+        }
+    ],
+    "references": [
+        {
+            "name": "Joey Flores, Co-founder and CEO of Earbits, Inc.",
+            "email": "joey.flores@earbits.com",
+            "phone": "7658765783"
+        },
+        {
+            "name": "Yotam Rosenbaum, SVP of Operations, Earbits, Inc.",
+            "email": "yotam.rosenbaum@earbits.com",
+            "phone": "7656765783"
+        },
+        {
+            "name": "Ryan Kirkman, Senior Software Engineer at Nerdwallet",
+            "email": "ryan.kirkman@nerdwallet.com",
+            "phone": "7658765283"
+        }
+    ],
+    "skills": [
+        { "name": "HTML / JSX" },
+        { "name": "CSS / Styled Components" },
+        { "name": "Javascript / Typescript" },
+        { "name": "React" },
+        { "name": "Redux / Apollo" }
+    ],
+    "work": [
+        {
+            "summary": "Blockbid is an Australian crypto currency exchange. ",
+            "company": "Blockbid",
+            "position": "Senior Javascript Developer",
+            "date_start": "2018-03-01",
+            "responsabilities": [
+                { "summary": "React, Apollo, Styled Components" },
+                { "summary": "Node.js microservices" },
+                { "summary": "Deployed on Kubenetes/GCloud (I didn't set it up)" }
+            ]
+        },
+        {
+            "responsabilities": [
+                { "summary": "Worked with Postgres, Redis and Dynamodb for storage." },
+                { "summary": "Hosted on a mixture of Heroku Apps and EC2 servers." },
+                { "summary": "Caching by Fastly and Cloudflare" },
+                { "summary": "Hybrid app supported on all platforms" }
+            ],
+            "summary": "Built a very large and complex React / Redux application. It works on all platforms and has IOS/Android builds due to it being a PWA. (wrapped it in React Native though only implementing a WebView)",
+            "company": "Listium",
+            "position": "Developer",
+            "date_start": "2016-01-01",
+            "date_end": "2018-01-01"
+        },
+        {
+            "responsabilities": [
+                { "summary": "Millions of sites use the CDN in production" },
+                { "summary": "Larger market share than Yahoo's and Microsoft's content distribution network" },
+                { "summary": "We serve hundreds of billions request a month" },
+                { "summary": "Contains over 2000 popular Javascript libraries" },
+                { "summary": "Millions of developers visit the site per year" }
+            ],
+            "summary": "Following Google’s CDN for jQuery, we decided to start a CDN for the less popular Javascript frameworks. The CDN is community moderated and open source on GitHub. We secured a partnership with Cloudflare who now supports the infrastructure.",
+            "company": "Cdnjs",
+            "position": "Co-Founder",
+            "date_start": "2011-01-08"
+        },
+        {
+            "responsabilities": [
+                { "summary": "Developed new tools for contacting congress" },
+                { "summary": "Brainstormed campaign ideas to raise maximum awareness about issues" },
+                { "summary": "Lots of social networking integration" }
+            ],
+            "summary": "Hired to take EFF's campaigning to the next level by building an action centre in Ruby on Rails. The action centre is built around some large open source tools that lower the barrier to entry when contacting congress.",
+            "company": "Electronic Frontier Foundation",
+            "position": "Developer",
+            "date_start": "2014-04-01",
+            "date_end": "2016-01-01"
+        },
+        {
+            "responsabilities": [
+                { "summary": "Managed a small team of developers and designers" },
+                { "summary": "Built the entire frontend application with Backbone.js" },
+                { "summary": "Transferred all of the infrastructure from Heroku to AWS" }
+            ],
+            "summary": "Started off as a front end developer but took on the role of CTO in early 2013. The application frontend is built with Javascript and organized as a single page application that talks to a collection of Rails web servers which are connected to MongoDB.",
+            "company": "Earbits",
+            "position": "CTO",
+            "date_start": "2015-01-09",
+            "date_end": "2013-03-08"
+        },
+        {
+            "responsabilities": [
+                { "summary": "Over 1500 stars on Github" },
+                { "summary": "Community developed themes" },
+                { "summary": "50,000 views on the hosted service" }
+            ],
+            "summary": "JSON Resume is a community driven open source initiative to create a JSON based standard for resumes. There is no reason why there can't be a common standard for writing a resume that can be extended with an ecosystem of open source tools.",
+            "company": "JSON Resume",
+            "position": "Founder",
+            "date_start": "2014-04-01"
+        },
+        {
+            "responsabilities": [
+                { "summary": "Generated  37,000,000 banner views" },
+                { "summary": "100, 000 phone calls to congress" },
+                { "summary": "500, 000 emails" },
+                { "summary": "250, 000 signatures" }
+            ],
+            "summary": "Worked on many politically charged campaigns against mass surveillance. Not only technically challenging work but also a lot of networking and getting my hands dirty with politics.    Our biggest project was \"TheDayWeFightBack\"..",
+            "company": "Taskforce.is",
+            "position": "Developer",
+            "date_start": "2013-06-01",
+            "date_end": "2016-01-01"
+        },
+        {
+            "responsabilities": [
+                { "summary": "The site and blog combined have managed to receive over 200,000 visitors in 2014." }
+            ],
+            "summary": "An international directory of civilian drone / UAV operators for hire. Services include aerial photography, aerial video, mapping, surveying, precision agriculture, real estate photography, remote inspections and infrared imaging. Our plan is to be the place to go when looking for UAV/Drone services. The website is built in Backbone.js and API is built with Node.js and Postgres. ",
+            "company": "Drone Hire",
+            "position": "Co-Founder",
+            "date_start": "2013-01-01"
+        }
+    ]
+}
