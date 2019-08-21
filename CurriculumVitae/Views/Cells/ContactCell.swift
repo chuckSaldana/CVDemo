@@ -15,12 +15,15 @@ class ContactCell: UITableViewCell {
     @IBOutlet weak var websiteLbl: UILabel!
     @IBOutlet weak var locationLbl: UILabel!
     
-    var contact: Contact? {
+    var contact: CellInfo? {
         didSet {
-            self.emailLbl.text = contact?.email
-            self.phoneLbl.text = contact?.phone
-            self.websiteLbl.text = contact?.website
-            self.locationLbl.text = "\(contact?.location?.city ?? ""), \(contact?.location?.state ?? "")"
+            guard  let contact = contact as? ContactCellInfo else {
+                return
+            }
+            self.emailLbl.text = contact.email
+            self.phoneLbl.text = contact.phone
+            self.websiteLbl.text = contact.website
+            self.locationLbl.text = "\(contact.city ?? ""), \(contact.state ?? "")"
         }
     }
     

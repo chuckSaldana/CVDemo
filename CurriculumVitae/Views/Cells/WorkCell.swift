@@ -13,17 +13,20 @@ class WorkCell: UITableViewCell {
     @IBOutlet weak var companyLbl: UILabel!
     @IBOutlet weak var datesLbl: UILabel!
     
-    var work: Role? {
+    var role: CellInfo? {
         didSet {
-            self.companyLbl.text = work?.company
+            guard  let role = role as? RoleCellInfo else {
+                return
+            }
+            self.companyLbl.text = role.company
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-dd-MM"
             var dateText = ""
-            if let dateStart = work?.date_start {
+            if let dateStart = role.dateStart {
                 let dateStartString = dateFormatter.string(from: dateStart)
                 dateText = dateText + "From: \(dateStartString)"
             }
-            if let dateEnd = work?.date_end {
+            if let dateEnd = role.dateEnd {
                 let dateEndString = dateFormatter.string(from: dateEnd)
                 dateText = dateText + "to: \(dateEndString)"
             } else {

@@ -12,9 +12,12 @@ class SkillCell: UITableViewCell {
 
     @IBOutlet weak var nameLbl: UILabel!
     
-    var skill: Skill? {
+    var skill: CellInfo? {
         didSet {
-            self.nameLbl.text = skill?.name
+            guard  let skill = skill as? SkillCellInfo else {
+                return
+            }
+            self.nameLbl.text = skill.name
         }
     }
     

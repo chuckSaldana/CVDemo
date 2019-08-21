@@ -1,27 +1,23 @@
 //
-//  ReferenceCell.swift
+//  InterestCell.swift
 //  CurriculumVitae
 //
-//  Created by Apocalapsus on 20/08/19.
+//  Created by Apocalapsus on 21/08/19.
 //  Copyright © 2019 Carlos. All rights reserved.
 //
 
 import UIKit
 
-class ReferenceCell: UITableViewCell {
+class InterestCell: UITableViewCell {
 
     @IBOutlet weak var nameLbl: UILabel!
-    @IBOutlet weak var emailLbl: UILabel!
-    @IBOutlet weak var phoneLbl: UILabel!
     
-    var reference: CellInfo? {
+    var interest: CellInfo? {
         didSet {
-            guard  let reference = reference as? ReferenceCellInfo else {
+            guard  let interest = interest as? InterestCellInfo else {
                 return
             }
-            self.nameLbl.text = reference.name
-            self.emailLbl.text = reference.email
-            self.phoneLbl.text = reference.phone
+            self.nameLbl.text = interest.name
         }
     }
     

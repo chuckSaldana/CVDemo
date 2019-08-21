@@ -14,18 +14,21 @@ class EducationCell: UITableViewCell {
     @IBOutlet weak var degreeLbl: UILabel!
     @IBOutlet weak var datesLbl: UILabel!
     
-    var education: Education? {
+    var education: CellInfo? {
         didSet {
-            self.institutionLbl.text = education?.institution
-            self.degreeLbl.text = education?.degree_earned
+            guard  let education = education as? EducationCellInfo else {
+                return
+            }
+            self.institutionLbl.text = education.institution
+            self.degreeLbl.text = education.degree
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-dd-MM"
             var dateText = ""
-            if let dateStart = education?.date_start {
+            if let dateStart = education.dateStart {
                 let dateStartString = dateFormatter.string(from: dateStart)
                 dateText = dateText + "From: \(dateStartString)"
             }
-            if let dateEnd = education?.date_end {
+            if let dateEnd = education.dateEnd {
                 let dateEndString = dateFormatter.string(from: dateEnd)
                 dateText = dateText + "to: \(dateEndString)"
             } else {
