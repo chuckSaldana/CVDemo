@@ -19,21 +19,31 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="75.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGk-fV-gli">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGk-fV-gli">
                         <rect key="frame" x="16" y="11" width="288" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="z25-hC-heW"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Kr-gP-c5v">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Kr-gP-c5v">
                         <rect key="frame" x="16" y="40" width="288" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="ZGk-fV-gli" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="9ez-AM-KqT"/>
+                    <constraint firstItem="5Kr-gP-c5v" firstAttribute="top" secondItem="ZGk-fV-gli" secondAttribute="bottom" constant="8" symbolic="YES" id="FN2-qy-Wcy"/>
+                    <constraint firstItem="ZGk-fV-gli" firstAttribute="trailing" secondItem="5Kr-gP-c5v" secondAttribute="trailing" id="H07-ew-uSx"/>
+                    <constraint firstItem="ZGk-fV-gli" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="ivA-oU-f4M"/>
+                    <constraint firstItem="ZGk-fV-gli" firstAttribute="leading" secondItem="5Kr-gP-c5v" secondAttribute="leading" id="miO-yf-9I3"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="5Kr-gP-c5v" secondAttribute="bottom" constant="4" id="pst-fn-LO5"/>
+                    <constraint firstItem="ZGk-fV-gli" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="u7w-Zc-uGX"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
