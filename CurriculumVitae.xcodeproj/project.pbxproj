@@ -26,6 +26,9 @@
 		6E3185B9230C791E008C9AD4 /* EmptySample.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E3185B8230C791E008C9AD4 /* EmptySample.json */; };
 		6E3185BB230C79C8008C9AD4 /* InvalidFeedSample.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E3185BA230C79C8008C9AD4 /* InvalidFeedSample.json */; };
 		6E3185C0230C8F5A008C9AD4 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3185BF230C8F5A008C9AD4 /* CoreDataManager.swift */; };
+		6E3185C8230CCA8E008C9AD4 /* ViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3185C7230CCA8E008C9AD4 /* ViewControllerViewModel.swift */; };
+		6E3185CC230CCF3F008C9AD4 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3185CA230CCF3F008C9AD4 /* ProfileCell.swift */; };
+		6E3185CD230CCF3F008C9AD4 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E3185CB230CCF3F008C9AD4 /* ProfileCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		6E3185B8230C791E008C9AD4 /* EmptySample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EmptySample.json; sourceTree = "<group>"; };
 		6E3185BA230C79C8008C9AD4 /* InvalidFeedSample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = InvalidFeedSample.json; sourceTree = "<group>"; };
 		6E3185BF230C8F5A008C9AD4 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		6E3185C7230CCA8E008C9AD4 /* ViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerViewModel.swift; sourceTree = "<group>"; };
+		6E3185CA230CCF3F008C9AD4 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		6E3185CB230CCF3F008C9AD4 /* ProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				6E04D1CD230836D900CD5210 /* ViewController.swift */,
+				6E3185C7230CCA8E008C9AD4 /* ViewControllerViewModel.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -207,6 +214,7 @@
 		6E04D2022308380D00CD5210 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6E3185C9230CCBEF008C9AD4 /* Cells */,
 				6E04D1D5230836DD00CD5210 /* Assets.xcassets */,
 				6E04D2032308383D00CD5210 /* Resources */,
 			);
@@ -247,6 +255,15 @@
 				6E3185BF230C8F5A008C9AD4 /* CoreDataManager.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		6E3185C9230CCBEF008C9AD4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6E3185CA230CCF3F008C9AD4 /* ProfileCell.swift */,
+				6E3185CB230CCF3F008C9AD4 /* ProfileCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E04D1D9230836DD00CD5210 /* LaunchScreen.storyboard in Resources */,
+				6E3185CD230CCF3F008C9AD4 /* ProfileCell.xib in Resources */,
 				6E04D1D6230836DD00CD5210 /* Assets.xcassets in Resources */,
 				6E04D1D1230836D900CD5210 /* Main.storyboard in Resources */,
 			);
@@ -386,10 +404,12 @@
 				6E04D1CE230836D900CD5210 /* ViewController.swift in Sources */,
 				6E04D20F23088B2C00CD5210 /* CoreDataHandler.swift in Sources */,
 				6E04D20B230879F900CD5210 /* DataLauncher.swift in Sources */,
+				6E3185CC230CCF3F008C9AD4 /* ProfileCell.swift in Sources */,
 				6E04D209230879CC00CD5210 /* Launcher.swift in Sources */,
 				6E04D207230847A900CD5210 /* CVFetcher.swift in Sources */,
 				6E04D1CC230836D900CD5210 /* AppDelegate.swift in Sources */,
 				6E04D1D4230836D900CD5210 /* CurriculumVitae.xcdatamodeld in Sources */,
+				6E3185C8230CCA8E008C9AD4 /* ViewControllerViewModel.swift in Sources */,
 				6E04D2052308474100CD5210 /* DataFetcher.swift in Sources */,
 				6E04D20D230886AA00CD5210 /* CVParser.swift in Sources */,
 			);
