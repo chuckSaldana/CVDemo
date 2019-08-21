@@ -9,9 +9,20 @@
 import UIKit
 
 class ContactCell: UITableViewCell {
-
-    @IBOutlet weak var headerLbl: UILabel!
-    @IBOutlet weak var contactInfoLbl: UILabel!
+    
+    @IBOutlet weak var emailLbl: UILabel!
+    @IBOutlet weak var phoneLbl: UILabel!
+    @IBOutlet weak var websiteLbl: UILabel!
+    @IBOutlet weak var locationLbl: UILabel!
+    
+    var contact: Contact? {
+        didSet {
+            self.emailLbl.text = contact?.email
+            self.phoneLbl.text = contact?.phone
+            self.websiteLbl.text = contact?.website
+            self.locationLbl.text = "\(contact?.location?.city ?? ""), \(contact?.location?.state ?? "")"
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

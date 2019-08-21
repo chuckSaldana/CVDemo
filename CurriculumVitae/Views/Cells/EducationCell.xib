@@ -63,7 +63,7 @@
                 <outlet property="degreeLbl" destination="sG1-j4-iHX" id="GXu-IU-fub"/>
                 <outlet property="institutionLbl" destination="vid-F5-ERp" id="r3T-Jl-z2G"/>
             </connections>
-            <point key="canvasLocation" x="184" y="24"/>
+            <point key="canvasLocation" x="38" y="56"/>
         </tableViewCell>
     </objects>
 </document>

@@ -13,6 +13,15 @@ class ReferenceCell: UITableViewCell {
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var emailLbl: UILabel!
     @IBOutlet weak var phoneLbl: UILabel!
+    
+    var reference: Reference? {
+        didSet {
+            self.nameLbl.text = reference?.name
+            self.emailLbl.text = reference?.email
+            self.phoneLbl.text = reference?.phone
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

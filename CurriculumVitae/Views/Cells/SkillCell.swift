@@ -11,6 +11,13 @@ import UIKit
 class SkillCell: UITableViewCell {
 
     @IBOutlet weak var nameLbl: UILabel!
+    
+    var skill: Skill? {
+        didSet {
+            self.nameLbl.text = skill?.name
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
