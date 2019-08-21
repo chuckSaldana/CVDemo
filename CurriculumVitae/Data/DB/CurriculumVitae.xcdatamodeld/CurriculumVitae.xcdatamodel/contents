@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="17G8030" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Contact" representedClassName="Contact" syncable="YES" codeGenerationType="class">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="website" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="curriculum" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Curriculum" inverseName="contact" inverseEntity="Curriculum" syncable="YES"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="contact" inverseEntity="Location" syncable="YES"/>
+    </entity>
+    <entity name="Curriculum" representedClassName="Curriculum" syncable="YES" codeGenerationType="class">
+        <attribute name="label" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photo_path" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="contact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" inverseName="curriculum" inverseEntity="Contact" syncable="YES"/>
+        <relationship name="educations" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Education" inverseName="curriculum" inverseEntity="Education" syncable="YES"/>
+        <relationship name="interests" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Interest" inverseName="curriculum" inverseEntity="Interest" syncable="YES"/>
+        <relationship name="references" optional="YES" toMany="YES" minCount="3" deletionRule="Nullify" destinationEntity="Reference" inverseName="curriculum" inverseEntity="Reference" syncable="YES"/>
+        <relationship name="roles" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="Role" inverseName="curriculum" inverseEntity="Role" syncable="YES"/>
+        <relationship name="skills" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="Skill" inverseName="curriculum" inverseEntity="Skill" syncable="YES"/>
+    </entity>
+    <entity name="Education" representedClassName="Education" syncable="YES" codeGenerationType="class">
+        <attribute name="date_end" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="date_start" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="degree_earned" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="institution" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="curriculum" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Curriculum" inverseName="educations" inverseEntity="Curriculum" syncable="YES"/>
+    </entity>
+    <entity name="Interest" representedClassName="Interest" syncable="YES" codeGenerationType="class">
+        <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="curriculum" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Curriculum" inverseName="interests" inverseEntity="Curriculum" syncable="YES"/>
+    </entity>
+    <entity name="Location" representedClassName="Location" syncable="YES" codeGenerationType="class">
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="contact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact" inverseName="location" inverseEntity="Contact" syncable="YES"/>
+    </entity>
+    <entity name="Reference" representedClassName="Reference" syncable="YES" codeGenerationType="class">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="curriculum" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Curriculum" inverseName="references" inverseEntity="Curriculum" syncable="YES"/>
+    </entity>
+    <entity name="Responsability" representedClassName="Responsability" syncable="YES" codeGenerationType="class">
+        <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="role" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Role" inverseName="responsabilities" inverseEntity="Role" syncable="YES"/>
+    </entity>
+    <entity name="Role" representedClassName="Role" syncable="YES" codeGenerationType="class">
+        <attribute name="company" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date_end" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="date_start" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="position" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="summary" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="curriculum" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Curriculum" inverseName="roles" inverseEntity="Curriculum" syncable="YES"/>
+        <relationship name="responsabilities" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="Responsability" inverseName="role" inverseEntity="Responsability" syncable="YES"/>
+    </entity>
+    <entity name="Skill" representedClassName="Skill" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="curriculum" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Curriculum" inverseName="skills" inverseEntity="Curriculum" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Curriculum" positionX="-63" positionY="-18" width="128" height="195"/>
+        <element name="Contact" positionX="-54" positionY="-9" width="128" height="120"/>
+        <element name="Skill" positionX="-36" positionY="9" width="128" height="75"/>
+        <element name="Role" positionX="-18" positionY="27" width="128" height="150"/>
+        <element name="Education" positionX="0" positionY="45" width="128" height="135"/>
+        <element name="Interest" positionX="18" positionY="63" width="128" height="75"/>
+        <element name="Responsability" positionX="36" positionY="108" width="128" height="75"/>
+        <element name="Reference" positionX="0" positionY="63" width="128" height="105"/>
+        <element name="Location" positionX="9" positionY="72" width="128" height="105"/>
+    </elements>
+</model>
