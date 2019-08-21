@@ -29,6 +29,8 @@
 		6E3185C8230CCA8E008C9AD4 /* ViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3185C7230CCA8E008C9AD4 /* ViewControllerViewModel.swift */; };
 		6E3185CC230CCF3F008C9AD4 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3185CA230CCF3F008C9AD4 /* ProfileCell.swift */; };
 		6E3185CD230CCF3F008C9AD4 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E3185CB230CCF3F008C9AD4 /* ProfileCell.xib */; };
+		6E3185D0230CD222008C9AD4 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3185CE230CD222008C9AD4 /* ContactCell.swift */; };
+		6E3185D1230CD222008C9AD4 /* ContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E3185CF230CD222008C9AD4 /* ContactCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		6E3185C7230CCA8E008C9AD4 /* ViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerViewModel.swift; sourceTree = "<group>"; };
 		6E3185CA230CCF3F008C9AD4 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		6E3185CB230CCF3F008C9AD4 /* ProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
+		6E3185CE230CD222008C9AD4 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		6E3185CF230CD222008C9AD4 /* ContactCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +266,8 @@
 			children = (
 				6E3185CA230CCF3F008C9AD4 /* ProfileCell.swift */,
 				6E3185CB230CCF3F008C9AD4 /* ProfileCell.xib */,
+				6E3185CE230CD222008C9AD4 /* ContactCell.swift */,
+				6E3185CF230CD222008C9AD4 /* ContactCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -373,6 +379,7 @@
 				6E04D1D9230836DD00CD5210 /* LaunchScreen.storyboard in Resources */,
 				6E3185CD230CCF3F008C9AD4 /* ProfileCell.xib in Resources */,
 				6E04D1D6230836DD00CD5210 /* Assets.xcassets in Resources */,
+				6E3185D1230CD222008C9AD4 /* ContactCell.xib in Resources */,
 				6E04D1D1230836D900CD5210 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,6 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E3185D0230CD222008C9AD4 /* ContactCell.swift in Sources */,
 				6E04D1CE230836D900CD5210 /* ViewController.swift in Sources */,
 				6E04D20F23088B2C00CD5210 /* CoreDataHandler.swift in Sources */,
 				6E04D20B230879F900CD5210 /* DataLauncher.swift in Sources */,

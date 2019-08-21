@@ -1,5 +1,5 @@
 //
-//  ProfileCell.swift
+//  ContactCell.swift
 //  CurriculumVitae
 //
 //  Created by Apocalapsus on 20/08/19.
@@ -8,12 +8,10 @@
 
 import UIKit
 
-class ProfileCell: UITableViewCell {
+class ContactCell: UITableViewCell {
 
-    @IBOutlet weak var photoImgV: UIImageView!
-    @IBOutlet weak var nameLbl: UILabel!
-    @IBOutlet weak var occupationLbl: UILabel!
-    @IBOutlet weak var summaryLbl: UILabel!
+    @IBOutlet weak var headerLbl: UILabel!
+    @IBOutlet weak var contactInfoLbl: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
