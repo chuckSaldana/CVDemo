@@ -6,7 +6,7 @@
     "contact": {
         "website": "https://ajaxdavis.com",
         "email": "thomasalwyndavis@gmail.com",
-        "phone": "thomasalwyndavis@gmail.com",
+        "phone": "7658765781",
         "location": {
             "city": "Melbourne",
             "countryCode": "AU"
@@ -44,6 +44,12 @@
         { "name": "Javascript / Typescript" },
         { "name": "React" },
         { "name": "Redux / Apollo" }
+    ],
+    "interests": [
+        { "name": "Volunteer Work" },
+        { "name": "Club Memberships" },
+        { "name": "Blogging" },
+        { "name": "Sports" }
     ],
     "work": [
         {

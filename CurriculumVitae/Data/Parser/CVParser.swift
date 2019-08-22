@@ -25,7 +25,8 @@ struct CVParser {
     // Find each object in the json and iterate throughout collections to pupulate the curriculum object
     @discardableResult
     func getCVWith(dictionary: [String: Any]) throws -> Curriculum {
-        guard let context = CoreDataHandler.shared.context else {
+        let coreDataHandler = CoreDataHandler()
+        guard let context = coreDataHandler.context else {
             throw ParsingError.contextNotFound
         }
         guard let curriculumEntity = NSEntityDescription.entity(forEntityName: "Curriculum", in: context) else {
@@ -121,6 +122,25 @@ struct CVParser {
         }
         
         newCurriculum.setValue(skills, forKey: "skills")
+        
+        // Interests
+        let interestsLocator: ArrayLocator = try managedObjectAndDictionaryWith(entityName: "Interest",
+                                                                             jsonName: "interests",
+                                                                             enclosingDictionary: dictionary,
+                                                                             context: context)
+        var interests: Set<NSManagedObject> = Set()
+        for interest in interestsLocator.array {
+            guard let skillEntity = NSEntityDescription.entity(forEntityName: "Interest", in: context) else {
+                throw ParsingError.managedTypeNotFound
+            }
+            
+            let newInterest = NSManagedObject(entity: skillEntity, insertInto: context)
+            newInterest.setValue(interest["name"], forKey: "summary")
+            
+            interests.insert(newInterest)
+        }
+        
+        newCurriculum.setValue(interests, forKey: "interests")
         
         // Work
         let workLocator: ArrayLocator = try managedObjectAndDictionaryWith(entityName: "Role",
