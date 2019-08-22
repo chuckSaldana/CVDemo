@@ -25,6 +25,7 @@ struct DataLauncher: Launcher {
                 do {
                     try self.parser.getCVWith(dictionary: cvDictionary)
                     try self.coreDataHandler?.saveData()
+                    NotificationCenter.default.post(name: Notification.Name(rawValue: "didDownloadCVData"), object: nil)
                 } catch let error {
                     print("Error: \(error)")
                 }
