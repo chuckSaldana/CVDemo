@@ -13,6 +13,7 @@ class WorkCell: UITableViewCell, CVCell {
     @IBOutlet weak var companyLbl: UILabel!
     @IBOutlet weak var datesLbl: UILabel!
     
+    // Fill cell UI with info's data on assignment
     var info: CellInfo? {
         didSet {
             guard  let role = info as? RoleCellInfo else {
@@ -22,16 +23,4 @@ class WorkCell: UITableViewCell, CVCell {
             self.datesLbl.text = role.dateRange
         }
     }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }

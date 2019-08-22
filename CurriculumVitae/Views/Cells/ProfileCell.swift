@@ -15,6 +15,7 @@ class ProfileCell: UITableViewCell, CVCell {
     @IBOutlet weak var occupationLbl: UILabel!
     @IBOutlet weak var summaryLbl: UILabel!
     
+    // Fill cell UI with info's data on assignment
     var info: CellInfo? {
         didSet {
             guard  let profile = info as? ProfileCellInfo else {

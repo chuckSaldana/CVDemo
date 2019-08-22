@@ -15,10 +15,12 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Subscribe to new data updates
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(newCVDataAvailable),
                                                name: NSNotification.Name(rawValue: "didDownloadCVData"),
                                                object: nil)
+        // Register cells
         self.tableView.register(UINib(nibName: "ProfileCell", bundle: nil), forCellReuseIdentifier: ProfileCell.cellIdentifier)
         self.tableView.register(UINib(nibName: "ContactCell", bundle: nil), forCellReuseIdentifier: ContactCell.cellIdentifier)
         self.tableView.register(UINib(nibName: "SkillCell", bundle: nil), forCellReuseIdentifier: SkillCell.cellIdentifier)
@@ -30,15 +32,19 @@ class MainViewController: UIViewController {
         
     @objc func newCVDataAvailable() {
         do {
+            // Recuperate data from DB
             if let curriculum = try DataLauncher.shared.coreDataHandler?.getCurriculum() {
+                // Initialize view model and send data to populate cells
                 self.viewModel = MainViewControllerViewModel(curriculum: curriculum)
                 self.reloadUI()
             }
         } catch {
+            self.displayErrorMessage("Some error happened to load the application's data.")
             print("Exception caught: \(error)")
         }
     }
     
+    // Procurate to run UI updates on main thread
     func reloadUI() {
         DispatchQueue.main.async {
             self.tableView.dataSource = self.viewModel

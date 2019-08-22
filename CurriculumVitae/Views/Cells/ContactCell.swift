@@ -15,6 +15,7 @@ class ContactCell: UITableViewCell, CVCell {
     @IBOutlet weak var websiteLbl: UILabel!
     @IBOutlet weak var locationLbl: UILabel!
     
+    // Fill cell UI with info's data on assignment
     var info: CellInfo? {
         didSet {
             guard  let contact = info as? ContactCellInfo else {
@@ -26,16 +27,4 @@ class ContactCell: UITableViewCell, CVCell {
             self.locationLbl.text = contact.location
         }
     }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }

@@ -14,6 +14,7 @@ class EducationCell: UITableViewCell, CVCell {
     @IBOutlet weak var degreeLbl: UILabel!
     @IBOutlet weak var datesLbl: UILabel!
     
+    // Fill cell UI with info's data on assignment
     var info: CellInfo? {
         didSet {
             guard  let education = info as? EducationCellInfo else {
@@ -24,16 +25,4 @@ class EducationCell: UITableViewCell, CVCell {
             self.datesLbl.text = education.dateRange
         }
     }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }

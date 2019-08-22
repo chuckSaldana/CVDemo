@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Make uniform cells by having a common info property
 protocol CVCell {
     var info: CellInfo? { get set }
 }

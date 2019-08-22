@@ -14,6 +14,7 @@ class ReferenceCell: UITableViewCell, CVCell {
     @IBOutlet weak var emailLbl: UILabel!
     @IBOutlet weak var phoneLbl: UILabel!
     
+    // Fill cell UI with info's data on assignment
     var info: CellInfo? {
         didSet {
             guard  let reference = info as? ReferenceCellInfo else {
@@ -24,16 +25,4 @@ class ReferenceCell: UITableViewCell, CVCell {
             self.phoneLbl.text = reference.phone
         }
     }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }

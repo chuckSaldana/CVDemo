@@ -13,24 +13,26 @@ import CoreData
 class MainViewControllerViewModel:NSObject, UITableViewDataSource {
     weak var curriculum: Curriculum?
     var cvItems: [String: NSManagedObject] = [:]
-    
     var items = [SectionInfo]()
     
+    // Create the table sections and it's cell's information
     convenience init(curriculum: Curriculum?) {
         self.init()
         guard let safeCurriculum = curriculum else {
             return
         }
         
+        // Profile
         let profile = ProfileCellInfo(photoPath: safeCurriculum.photo_path,
                                       name: safeCurriculum.name,
                                       label: safeCurriculum.label,
                                       summary: safeCurriculum.summary)
         items.append(profile)
         
+        // Contact
         if let contact = curriculum?.contact {
             var location: String = ""
-            
+            // Build location string with available data
             if let city = contact.location?.city {
                 if let state = contact.location?.state {
                     location = city + ", " + state
@@ -50,11 +52,12 @@ class MainViewControllerViewModel:NSObject, UITableViewDataSource {
             items.append(contactItem)
         }
         
+        // Work experience
         if let roles = curriculum?.roles {
             var roleItems: [RoleCellInfo] = []
             for role in Array(roles) {
                 guard let role = role as? Role else { continue }
-                
+                // Build date range string with available data
                 var dateRange: String = ""
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "yyyy-dd-MM"
@@ -74,11 +77,12 @@ class MainViewControllerViewModel:NSObject, UITableViewDataSource {
             items.append(roleSection)
         }
         
+        // Education
         if let educationExperiences = curriculum?.educations {
             var educationItems: [EducationCellInfo] = []
             for education in Array(educationExperiences) {
                 guard let education = education as? Education else { continue }
-                
+                // Build date range string with available data
                 var dateRange: String = ""
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "yyyy-dd-MM"
@@ -100,6 +104,7 @@ class MainViewControllerViewModel:NSObject, UITableViewDataSource {
             items.append(educationSection)
         }
         
+        // Skills
         if let skills = curriculum?.skills {
             var skillItems: [SkillCellInfo] = []
             for skill in Array(skills) {
@@ -113,6 +118,7 @@ class MainViewControllerViewModel:NSObject, UITableViewDataSource {
             items.append(skillSection)
         }
         
+        // References
         if let references = curriculum?.references {
             var referenceItems: [ReferenceCellInfo] = []
             for reference in Array(references) {
@@ -128,6 +134,7 @@ class MainViewControllerViewModel:NSObject, UITableViewDataSource {
             items.append(referenceSection)
         }
         
+        // Interests
         if let interests = curriculum?.interests {
             var interestItems: [InterestCellInfo] = []
             for interest in Array(interests) {

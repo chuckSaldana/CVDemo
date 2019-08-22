@@ -12,6 +12,7 @@ class InterestCell: UITableViewCell, CVCell {
     static let cellIdentifier: String = "InterestCellIdentifier"
     @IBOutlet weak var nameLbl: UILabel!
     
+    // Fill cell UI with info's data on assignment
     var info: CellInfo? {
         didSet {
             guard  let interest = info as? InterestCellInfo else {
@@ -20,16 +21,4 @@ class InterestCell: UITableViewCell, CVCell {
             self.nameLbl.text = interest.name
         }
     }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }
