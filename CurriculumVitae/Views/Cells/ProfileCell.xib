@@ -73,7 +73,7 @@
                 <outlet property="photoImgV" destination="MhJ-qB-OuW" id="2Z9-Xg-Rbn"/>
                 <outlet property="summaryLbl" destination="bRn-b9-QxJ" id="zLs-z6-gg5"/>
             </connections>
-            <point key="canvasLocation" x="-252.80000000000001" y="104.7976011994003"/>
+            <point key="canvasLocation" x="-701" y="-18"/>
         </tableViewCell>
     </objects>
 </document>

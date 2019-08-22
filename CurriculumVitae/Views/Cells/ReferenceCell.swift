@@ -8,15 +8,15 @@
 
 import UIKit
 
-class ReferenceCell: UITableViewCell {
-
+class ReferenceCell: UITableViewCell, CVCell {
+    static let cellIdentifier: String = "ReferenceCellIdentifier"
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var emailLbl: UILabel!
     @IBOutlet weak var phoneLbl: UILabel!
     
-    var reference: CellInfo? {
+    var info: CellInfo? {
         didSet {
-            guard  let reference = reference as? ReferenceCellInfo else {
+            guard  let reference = info as? ReferenceCellInfo else {
                 return
             }
             self.nameLbl.text = reference.name

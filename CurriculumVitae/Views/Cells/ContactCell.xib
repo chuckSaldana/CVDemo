@@ -71,8 +71,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="contactInfoLbl" destination="QHr-eJ-Yq2" id="Avu-1g-zOC"/>
-                <outlet property="emailLbl" destination="QHr-eJ-Yq2" id="m47-Uc-Luz"/>
+                <outlet property="emailLbl" destination="QHr-eJ-Yq2" id="c1S-Oh-033"/>
                 <outlet property="locationLbl" destination="w1c-5z-fsw" id="07t-Ol-EyP"/>
                 <outlet property="phoneLbl" destination="6gB-4M-Van" id="nCg-yN-X9h"/>
                 <outlet property="websiteLbl" destination="PMQ-zI-sUn" id="hvH-mB-K0t"/>

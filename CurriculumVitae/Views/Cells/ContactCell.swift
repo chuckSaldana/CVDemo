@@ -8,22 +8,22 @@
 
 import UIKit
 
-class ContactCell: UITableViewCell {
-    
+class ContactCell: UITableViewCell, CVCell {
+    static let cellIdentifier: String = "ContactCellIdentifier"
     @IBOutlet weak var emailLbl: UILabel!
     @IBOutlet weak var phoneLbl: UILabel!
     @IBOutlet weak var websiteLbl: UILabel!
     @IBOutlet weak var locationLbl: UILabel!
     
-    var contact: CellInfo? {
+    var info: CellInfo? {
         didSet {
-            guard  let contact = contact as? ContactCellInfo else {
+            guard  let contact = info as? ContactCellInfo else {
                 return
             }
             self.emailLbl.text = contact.email
             self.phoneLbl.text = contact.phone
             self.websiteLbl.text = contact.website
-            self.locationLbl.text = "\(contact.city ?? ""), \(contact.state ?? "")"
+            self.locationLbl.text = contact.location
         }
     }
     

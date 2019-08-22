@@ -8,31 +8,18 @@
 
 import UIKit
 
-class WorkCell: UITableViewCell {
-
+class WorkCell: UITableViewCell, CVCell {
+    static let cellIdentifier: String = "WorkCellIdentifier"
     @IBOutlet weak var companyLbl: UILabel!
     @IBOutlet weak var datesLbl: UILabel!
     
-    var role: CellInfo? {
+    var info: CellInfo? {
         didSet {
-            guard  let role = role as? RoleCellInfo else {
+            guard  let role = info as? RoleCellInfo else {
                 return
             }
             self.companyLbl.text = role.company
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-dd-MM"
-            var dateText = ""
-            if let dateStart = role.dateStart {
-                let dateStartString = dateFormatter.string(from: dateStart)
-                dateText = dateText + "From: \(dateStartString)"
-            }
-            if let dateEnd = role.dateEnd {
-                let dateEndString = dateFormatter.string(from: dateEnd)
-                dateText = dateText + "to: \(dateEndString)"
-            } else {
-                dateText = dateText + "to: Current"
-            }
-            self.datesLbl.text = dateText
+            self.datesLbl.text = role.dateRange
         }
     }
     

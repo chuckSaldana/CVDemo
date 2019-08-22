@@ -8,33 +8,20 @@
 
 import UIKit
 
-class EducationCell: UITableViewCell {
-
+class EducationCell: UITableViewCell, CVCell {
+    static let cellIdentifier: String = "EducationCellIdentifier"
     @IBOutlet weak var institutionLbl: UILabel!
     @IBOutlet weak var degreeLbl: UILabel!
     @IBOutlet weak var datesLbl: UILabel!
     
-    var education: CellInfo? {
+    var info: CellInfo? {
         didSet {
-            guard  let education = education as? EducationCellInfo else {
+            guard  let education = info as? EducationCellInfo else {
                 return
             }
             self.institutionLbl.text = education.institution
             self.degreeLbl.text = education.degree
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-dd-MM"
-            var dateText = ""
-            if let dateStart = education.dateStart {
-                let dateStartString = dateFormatter.string(from: dateStart)
-                dateText = dateText + "From: \(dateStartString)"
-            }
-            if let dateEnd = education.dateEnd {
-                let dateEndString = dateFormatter.string(from: dateEnd)
-                dateText = dateText + "to: \(dateEndString)"
-            } else {
-                dateText = dateText + "to: Current"
-            }
-            self.datesLbl.text = dateText
+            self.datesLbl.text = education.dateRange
         }
     }
     

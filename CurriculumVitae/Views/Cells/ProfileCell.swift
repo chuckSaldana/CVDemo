@@ -8,16 +8,16 @@
 
 import UIKit
 
-class ProfileCell: UITableViewCell {
-
+class ProfileCell: UITableViewCell, CVCell {
+    static let cellIdentifier: String = "ProfileCellIdentifier"
     @IBOutlet weak var photoImgV: UIImageView!
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var occupationLbl: UILabel!
     @IBOutlet weak var summaryLbl: UILabel!
     
-    var profile: CellInfo? {
+    var info: CellInfo? {
         didSet {
-            guard  let profile = profile as? ProfileCellInfo else {
+            guard  let profile = info as? ProfileCellInfo else {
                 return
             }
             if let photoUrlStr = profile.photoPath,

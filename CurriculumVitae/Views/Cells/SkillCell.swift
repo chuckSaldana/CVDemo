@@ -8,13 +8,13 @@
 
 import UIKit
 
-class SkillCell: UITableViewCell {
-
+class SkillCell: UITableViewCell, CVCell {
+    static let cellIdentifier: String = "SkillCellIdentifier"
     @IBOutlet weak var nameLbl: UILabel!
     
-    var skill: CellInfo? {
+    var info: CellInfo? {
         didSet {
-            guard  let skill = skill as? SkillCellInfo else {
+            guard  let skill = info as? SkillCellInfo else {
                 return
             }
             self.nameLbl.text = skill.name

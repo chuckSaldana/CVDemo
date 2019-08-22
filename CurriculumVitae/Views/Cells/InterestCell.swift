@@ -8,13 +8,13 @@
 
 import UIKit
 
-class InterestCell: UITableViewCell {
-
+class InterestCell: UITableViewCell, CVCell {
+    static let cellIdentifier: String = "InterestCellIdentifier"
     @IBOutlet weak var nameLbl: UILabel!
     
-    var interest: CellInfo? {
+    var info: CellInfo? {
         didSet {
-            guard  let interest = interest as? InterestCellInfo else {
+            guard  let interest = info as? InterestCellInfo else {
                 return
             }
             self.nameLbl.text = interest.name
