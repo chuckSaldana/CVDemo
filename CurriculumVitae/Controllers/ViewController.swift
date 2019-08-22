@@ -12,6 +12,7 @@ class MainViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     var viewModel: MainViewControllerViewModel?
+    @IBOutlet weak var loadingView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +49,9 @@ class MainViewController: UIViewController {
     func reloadUI() {
         DispatchQueue.main.async {
             self.tableView.dataSource = self.viewModel
+            self.tableView.isHidden = false
             self.tableView.reloadData()
+            self.loadingView.isHidden = true
         }
     }
 }
