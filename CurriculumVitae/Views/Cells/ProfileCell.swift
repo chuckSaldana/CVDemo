@@ -26,8 +26,10 @@ class ProfileCell: UITableViewCell, CVCell {
                 do {
                     self.photoImgV.image = UIImage(data: try Data(contentsOf: photoUrl))
                 } catch {
+                    self.photoImgV.image = UIImage(named: "photo_placeholder")
                     print("Exception caught: \(error)")
                 }
+                self.photoImgV.removeLoadingView()
             }
             self.nameLbl.text = profile.name
             self.occupationLbl.text = profile.label
@@ -37,13 +39,6 @@ class ProfileCell: UITableViewCell, CVCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.photoImgV.showLoadingView()
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }
