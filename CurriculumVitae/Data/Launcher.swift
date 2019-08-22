@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Implementations are expected to load all necessary application wide objects and operations
 protocol Launcher {
     var dataFetcher: CVFetcher { get set }
     var parser: CVParser { get set }

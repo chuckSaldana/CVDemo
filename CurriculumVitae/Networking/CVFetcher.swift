@@ -14,7 +14,11 @@ enum CVEndpoint: String {
 
 struct CVFetcher: DataFetcher {
     
-    func fetchCV(endpoint: CVEndpoint, completion: @escaping ([String: Any]) -> ()) {
-        fetchData(urlStr: endpoint.rawValue, completion: completion)
+    func fetchCV(endpoint: CVEndpoint, completion: @escaping ([String: Any]) -> ()) throws {
+        do {
+            try fetchData(urlStr: endpoint.rawValue, completion: completion)
+        } catch {
+            throw error
+        }
     }
 }

@@ -18,7 +18,7 @@ class MainViewController: UIViewController {
         // Subscribe to new data updates
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(newCVDataAvailable),
-                                               name: NSNotification.Name(rawValue: "didDownloadCVData"),
+                                               name: DataLauncher.didDownloadDataNotification,
                                                object: nil)
         // Register cells
         self.tableView.register(UINib(nibName: "ProfileCell", bundle: nil), forCellReuseIdentifier: ProfileCell.cellIdentifier)

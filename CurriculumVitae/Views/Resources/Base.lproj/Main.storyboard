@@ -38,11 +38,40 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lgw-rm-gRr">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="tqp-Bd-TXe">
+                                        <rect key="frame" x="169" y="283" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading CV please wait ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0A2-ql-H8Z">
+                                        <rect key="frame" x="88" y="344" width="199" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Dht-tz-KAd"/>
+                                            <constraint firstAttribute="width" constant="199" id="f3z-0H-f7d"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="tqp-Bd-TXe" firstAttribute="centerY" secondItem="Lgw-rm-gRr" secondAttribute="centerY" id="1ms-XJ-XR2"/>
+                                    <constraint firstItem="tqp-Bd-TXe" firstAttribute="centerX" secondItem="Lgw-rm-gRr" secondAttribute="centerX" id="Zty-dW-Irj"/>
+                                    <constraint firstItem="0A2-ql-H8Z" firstAttribute="top" secondItem="tqp-Bd-TXe" secondAttribute="bottom" constant="24" id="uli-C1-OqK"/>
+                                    <constraint firstItem="0A2-ql-H8Z" firstAttribute="centerX" secondItem="Lgw-rm-gRr" secondAttribute="centerX" id="xdp-WX-L18"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Lgw-rm-gRr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DjQ-MB-fIj"/>
+                            <constraint firstItem="Lgw-rm-gRr" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Dni-Sm-X2e"/>
                             <constraint firstItem="fNP-Xn-zT5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GAX-Su-SHJ"/>
+                            <constraint firstItem="Lgw-rm-gRr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="NlZ-uP-T4e"/>
                             <constraint firstItem="fNP-Xn-zT5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ysg-jy-S3z"/>
+                            <constraint firstItem="Lgw-rm-gRr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cKb-oZ-Ihq"/>
                             <constraint firstItem="fNP-Xn-zT5" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="fkH-gl-h6I"/>
                             <constraint firstItem="fNP-Xn-zT5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="m4h-3V-upg"/>
                         </constraints>
@@ -55,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-972" y="-80"/>
+            <point key="canvasLocation" x="-1135.2" y="-37.331334332833585"/>
         </scene>
     </scenes>
 </document>

@@ -8,15 +8,18 @@
 
 import Foundation
 
+enum DataFetcherError: Error {
+    case malformedURL
+}
+
 protocol DataFetcher {
 }
 
 extension DataFetcher {
-    func fetchData(urlStr: String, completion: @escaping ([String: Any]) -> ()) {
+    func fetchData(urlStr: String, completion: @escaping ([String: Any]) -> ()) throws {
         // Set up the URL request
         guard let url = URL(string: urlStr) else {
-            print("Error: cannot create URL")
-            return
+            throw DataFetcherError.malformedURL
         }
         let urlRequest = URLRequest(url: url)
         
@@ -29,7 +32,7 @@ extension DataFetcher {
             (data, response, error) in
             // check for any errors
             guard error == nil else {
-                print("error calling GET on /todos/1")
+                print("Error calling GET on /todos/1")
                 print(error!)
                 return
             }
@@ -47,18 +50,7 @@ extension DataFetcher {
                 }
                 
                 completion(todo)
-//                // now we have the todo
-//                // let's just print it to prove we can access it
-//                print("The todo is: " + todo.description)
-//
-//                // the todo object is a dictionary
-//                // so we just access the title using the "title" key
-//                // so check for a title and print it if we have one
-//                guard let todoTitle = todo["title"] as? String else {
-//                    print("Could not get todo title from JSON")
-//                    return
-//                }
-//                print("The title is: " + todoTitle)
+
             } catch let error {
                 print("error trying to convert data to JSON: \(error)")
                 return

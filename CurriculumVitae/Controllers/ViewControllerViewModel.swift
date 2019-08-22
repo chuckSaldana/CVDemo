@@ -218,8 +218,15 @@ class MainViewControllerViewModel:NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        switch items[indexPath.section].type {
-//            // do appropriate action for each type      }
+//        let section = items[indexPath.section]
+//        guard section.isSelectable else { return }
+//        
+//        let item = section.items[indexPath.row]
+//        let storyboard = UIStoryboard(name: "HeroDetail", bundle: nil)
+//        guard let detailVC = storyboard.instantiateViewController(withIdentifier: "HeroDetailViewController") as? HeroDetailViewController else {
+//            return
 //        }
+//        detailVC.hero = heroes[indexPath.row]
+//        self.navigationController?.show(detailVC, sender: nil)
     }
 }

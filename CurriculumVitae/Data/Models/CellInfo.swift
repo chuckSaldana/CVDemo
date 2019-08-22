@@ -34,7 +34,7 @@ protocol SectionInfo {
 // In order to support selction of cells that belong to a
 // populated section
 extension SectionInfo {
-    var selectable: Bool {
+    var isSelectable: Bool {
         return items.count > 0
     }
 }

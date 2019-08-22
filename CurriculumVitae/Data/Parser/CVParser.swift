@@ -21,6 +21,8 @@ enum ParsingError: Error {
 typealias DictionaryLocator = (object: NSManagedObject, dictionary: [String: Any])
 typealias ArrayLocator = (object: NSManagedObject, array: [[String: Any]])
 
+// This parser expects a specific structure in the dictionary
+// And expects a specific model defined for the Core Data stack
 struct CVParser {
     // Find each object in the json and iterate throughout collections to pupulate the curriculum object
     @discardableResult
