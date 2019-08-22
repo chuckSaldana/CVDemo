@@ -9,6 +9,7 @@
 import Foundation
 
 enum CVCellType {
+    case none
     case profile
     case contact
     case skill

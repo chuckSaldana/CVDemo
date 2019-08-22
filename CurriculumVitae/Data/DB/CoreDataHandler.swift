@@ -16,13 +16,28 @@ enum CoreDataHandlerError: Error {
 }
 
 class CoreDataHandler {
-    static let shared = CoreDataHandler()
     var context: NSManagedObjectContext?
     
     init() {
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
             self.context = appDelegate.persistentContainer.viewContext
         }
+    }
+    
+    func getCurriculum() throws -> Curriculum? {
+        let entityName = "Curriculum"
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
+        request.returnsObjectsAsFaults = false
+        do {
+            if let result = try context?.fetch(request) as? [NSManagedObject],
+                result.count > 0, let curriculum = result[0] as? Curriculum {
+                return curriculum
+            }
+        } catch {
+            print("Failed to fetch entity: \(entityName)")
+        }
+        
+        return nil
     }
     
     func saveData() throws {

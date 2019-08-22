@@ -9,9 +9,11 @@
 import Foundation
 
 struct DataLauncher: Launcher {
+    static let shared = DataLauncher()
     var dataFetcher: CVFetcher = CVFetcher()
     var parser: CVParser = CVParser()
     var coreDataHandler: CoreDataHandler?
+    var curriculum: Curriculum?
     
     init() {
         coreDataHandler = CoreDataHandler()
