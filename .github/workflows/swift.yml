@@ -1,0 +1,15 @@
+name: Continous Integration
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: macOS-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build
+      run: bundle install
+    - name: Build
+      run: bundle exec fastlane ios build_development
